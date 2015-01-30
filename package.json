@@ -1,0 +1,33 @@
+{
+  "name": "append-script",
+  "version": "0.0.1",
+  "description": "Promises to append a script to the document.",
+  "main": "lib/append-script.js",
+  "scripts": {
+    "test": "mocha --compilers js:6to5/register --ui bdd -R spec test/append-script.js",
+    "build": "6to5 lib/append-script.js --modules umd --out-file dist/append-script.js",
+    "watch:test": "watch 'npm run test' ./test",
+    "watch:build": "watch 'npm run build' ./lib",
+    "dev": "npm run watch:build & npm run watch:test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twalker/append-script.git"
+  },
+  "keywords": [
+    "script"
+  ],
+  "author": "twalker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twalker/append-script/issues"
+  },
+  "homepage": "https://github.com/twalker/append-script",
+  "dependencies": { },
+  "devDependencies": {
+    "6to5": "^3.0.0",
+    "mocha": "^2.1.0",
+    "chai": "^1.10.0",
+    "watch": "^0.13.0"
+  }
+}
