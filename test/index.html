@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>test</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="/node_modules/es6-module-loader/dist/es6-module-loader.js"></script>
+    <script src="/node_modules/systemjs/dist/system.js" data-6to5-src="/node_modules/6to5/browser.js"></script>
+    <script>
+      System.parser = '6to5'
+      System.config({
+        baseURL: '/'
+      })
+      System.import('test/append-script').then(function(){
+        mocha.run();
+      })
+    </script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
+</html>
