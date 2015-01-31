@@ -1,1 +1,1 @@
-var foo = "bar";
+window.foo = "bar";
